@@ -4,8 +4,9 @@ namespace Mission3
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+//<<<<<<< Maddy
             //Welcome users to game
             Console.WriteLine("Welcome to Tic-Tac-Toe!");
 
@@ -133,6 +134,12 @@ namespace Mission3
 
             //Call method to announce winner
 
+
+            static char[] arr = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
+            SupportingTools st = new SupportingTools();
+
+            st.PrintBoard(arr);
 
         }
     }
