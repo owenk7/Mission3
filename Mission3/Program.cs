@@ -6,7 +6,10 @@ namespace Mission3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            SupportingTools st = new SupportingTools();
+
+            st.PrintBoard();
+
         }
     }
 }
