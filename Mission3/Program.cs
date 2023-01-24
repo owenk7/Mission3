@@ -4,9 +4,13 @@ namespace Mission3
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Team 3-12 is the best in the core!");
+            static char[] arr = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
+            SupportingTools st = new SupportingTools();
+
+            st.PrintBoard(arr);
         }
     }
 }
