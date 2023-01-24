@@ -11,7 +11,6 @@ namespace Mission3
             SupportingTools st = new SupportingTools();
 
             st.PrintBoard(arr);
-
         }
     }
 }
