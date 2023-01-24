@@ -12,8 +12,8 @@ namespace Mission3
             //Create board game array to store game plays
             char[,] boardArray = new char[3, 3];
   
+            //Continue while loop while coninueGame is true
             bool continueGame = true;
-
             while (continueGame == true)
             {
                 //print board
