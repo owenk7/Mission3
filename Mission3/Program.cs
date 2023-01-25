@@ -1,5 +1,6 @@
-﻿using System;
-
+// Authors: Kimball Owen, Mason Fordsham, Sayer Halverson, and Madison Hoyt
+// Description: Tic-Tac-Toe Game for Mission #3
+using System;
 namespace Mission3
 {
     class Program
@@ -8,25 +9,20 @@ namespace Mission3
         {
             //Initiate 
             SupportingTools st = new SupportingTools();
-
             //Welcome users to game
             Console.WriteLine("Welcome to Tic-Tac-Toe!");
-
             //Create board game array to store game plays
             char[] boardArray = { '1', '2', '3', '4', '5', '6', '7', '8', '9'};
             int winner = 0;
-
             st.PrintBoard(boardArray);
             //Continue while loop while coninueGame is true
             bool continueGame = true;
-
-            //initate counter
+            //initate counters
             int count = 0;
             char mark = 'X';
             char player = '1';
             while (continueGame == true)
             {
-
                 //player takes turn
                 if (count % 2 == 0)
                 {
@@ -39,8 +35,6 @@ namespace Mission3
                     
                 Console.Write("Player " + player + " make your move (1-9) ");
                 string input = Console.ReadLine();
-
-
                 // see which player is playing
                 if (count%2 == 0)
                 {
@@ -89,13 +83,17 @@ namespace Mission3
                 }
                 //update board & call supporting class
                 st.PrintBoard(boardArray);
-
                 //Check to see if there is a winner
                 //call CheckWin method to check winner
                 winner = st.CheckWin(boardArray);
                 if (winner == 1)
                 {
-                    Console.WriteLine("~~~~Player " + player + " won the game!~~~~");
+                    Console.WriteLine("~~~~Player 1 won the game!~~~~");
+                    continueGame = false;
+                }
+                else if (winner == 2)
+                {
+                    Console.WriteLine("~~~~Player 2 won the game!~~~~");
                     continueGame = false;
                 }
                 else if (winner == -1)
@@ -103,14 +101,10 @@ namespace Mission3
                     Console.WriteLine("~~~~You tied!~~~~");
                     continueGame = false;
                 }
-
                 //update counter
                 count++;
             }
-
             
-
-
         }
     }
 }
