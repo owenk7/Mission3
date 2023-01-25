@@ -1,5 +1,5 @@
 ﻿// Authors: Kimball Owen, Mason Fordsham, Sayer Halverson, and Madison Hoyt
-// Descriptions: Tic-Tac-Toe Game for Mission #3
+// Description: Tic-Tac-Toe Game for Mission #3
 using System;
 
 namespace Mission3
@@ -105,7 +105,6 @@ namespace Mission3
                     Console.WriteLine("~~~~Player 2 won the game!~~~~");
                     continueGame = false;
                 }
-
                 else if (winner == -1)
                 {
                     Console.WriteLine("~~~~You tied!~~~~");
