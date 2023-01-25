@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Authors: Kimball Owen, Mason Fordsham, Sayer Halverson, and Madison Hoyt
+// Descriptions: Tic-Tac-Toe Game for Mission #3
+using System;
 
 namespace Mission3
 {
@@ -20,7 +22,7 @@ namespace Mission3
             //Continue while loop while coninueGame is true
             bool continueGame = true;
 
-            //initate counter
+            //initate counters
             int count = 0;
             char mark = 'X';
             char player = '1';
