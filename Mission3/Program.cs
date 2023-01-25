@@ -4,7 +4,7 @@ namespace Mission3
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             //Initiate 
             SupportingTools st = new SupportingTools();
