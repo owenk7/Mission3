@@ -6,132 +6,109 @@ namespace Mission3
     {
         static void Main(string[] args)
         {
+            //Initiate 
+            SupportingTools st = new SupportingTools();
+
             //Welcome users to game
             Console.WriteLine("Welcome to Tic-Tac-Toe!");
 
             //Create board game array to store game plays
-            char[,] boardArray = new char[3, 3];
-  
+            char[] boardArray = { '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+            int winner = 0;
+
+            st.PrintBoard(boardArray);
             //Continue while loop while coninueGame is true
             bool continueGame = true;
+
+            //initate counter
+            int count = 0;
+            char mark = 'X';
+            char player = '1';
             while (continueGame == true)
             {
-                //print board
 
-                //player 1 takes turn
-                Console.WriteLine("Player 1: Choose your spot. A-C represent columns, and 1-3 represent rows. (A1 is top left, A2 is middle left, and B3 is the third row in the middle)");
-                Console.WriteLine("Choose a column (A-C):");
-                string columnInput = Console.ReadLine();
-                Console.WriteLine("Choose a row (1-3):");
-                int rowInput = Convert.ToInt32(Console.ReadLine());
-
-                //update array
-                if (columnInput == "A")
+                //player takes turn
+                if (count % 2 == 0)
                 {
-                    if (rowInput == 1)
-                    {
-                        if  (boardArray[0,0] == ' ')
-                        {
-
-                        }
-                        boardArray[0, 0] = 'X';
-                    }
-                    else if (rowInput == 2)
-                    {
-                        boardArray[0, 1] = 'X';
-                    }
-                    else
-                    {
-                        boardArray[0, 2] = 'X';
-                    }
-                }
-                else if (columnInput == "B")
-                {
-                    if (rowInput == 1)
-                    {
-                        boardArray[1, 0] = 'X';
-                    }
-                    else if (rowInput == 2)
-                    {
-                        boardArray[1, 1] = 'X';
-                    }
-                    else
-                    {
-                        boardArray[1, 2] = 'X';
-                    }
+                    player = '1';
                 }
                 else
                 {
-                    if (rowInput == 1)
-                    {
-                        boardArray[2, 0] = 'X';
-                    }
-                    else if (rowInput == 2)
-                    {
-                        boardArray[2, 1] = 'X';
-                    }
-                    else
-                    {
-                        boardArray[2, 2] = 'X';
-                    }
+                    player = '2';
                 }
+                    
+                Console.Write("Player " + player + " make your move (1-9) ");
+                string input = Console.ReadLine();
 
-                //update board & call supporting class
 
-                //Check to see if player1 won
-
-                //player 2
-
-                //update array
-                if (columnInput == "A")
+                // see which player is playing
+                if (count%2 == 0)
                 {
-                    if (rowInput == 1)
-                    {
-                        boardArray[0, 0] = 'O';
-                    }
-                    else if (rowInput == 2)
-                    {
-                        boardArray[0, 1] = 'O';
-                    }
-                    else
-                    {
-                        boardArray[0, 2] = 'O';
-                    }
-                }
-                else if (columnInput == "O")
-                {
-                    if (rowInput == 1)
-                    {
-                        boardArray[1, 0] = 'O';
-                    }
-                    else if (rowInput == 2)
-                    {
-                        boardArray[1, 1] = 'O';
-                    }
-                    else
-                    {
-                        boardArray[1, 2] = 'O';
-                    }
+                    mark = 'X';
                 }
                 else
                 {
-                    if (rowInput == 1)
-                    {
-                        boardArray[2, 0] = 'O';
-                    }
-                    else if (rowInput == 2)
-                    {
-                        boardArray[2, 1] = 'O';
-                    }
-                    else
-                    {
-                        boardArray[2, 2] = 'O';
-                    }
+                    mark = 'O';
+                }
+                //update array
+                if (input == "1")
+                {
+                    boardArray[0] = mark;
+                }
+                else if (input == "2")
+                {
+                    boardArray[1] = mark;
+                }
+                else if (input == "3")
+                {
+                    boardArray[2] = mark;
+                }
+                else if (input == "4")
+                {
+                    boardArray[3] = mark;
+                }
+                else if (input == "5")
+                {
+                    boardArray[4] = mark;
+                }
+                else if (input == "6")
+                {
+                    boardArray[5] = mark;
+                }
+                else if (input == "7")
+                {
+                    boardArray[6] = mark;
+                }
+                else if (input == "8")
+                {
+                    boardArray[7] = mark;
+                }
+                else
+                {
+                    boardArray[8] = mark;
                 }
                 //update board & call supporting class
+                st.PrintBoard(boardArray);
+
+                //Check to see if there is a winner
+                //call CheckWin method to check winner
+                winner = st.CheckWin(boardArray);
+                if (winner == 1)
+                {
+                    Console.WriteLine("~~~~Player " + player + " won the game!~~~~");
+                    continueGame = false;
+                }
+                else if (winner == -1)
+                {
+                    Console.WriteLine("~~~~You tied!~~~~");
+                    continueGame = false;
+                }
+
+                //update counter
+                count++;
             }
 
-            //Call method to announce winner
+            
 
 
         }
