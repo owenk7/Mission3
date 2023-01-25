@@ -22,43 +22,99 @@ namespace Mission3
             // first row
             if (arrayBoard[0] == arrayBoard[1] && arrayBoard[1] == arrayBoard[2])
             {
-                return 1;
+                if (arrayBoard[0] == 'X')
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 2;
+                 }
             }
             // second row
             else if (arrayBoard[3] == arrayBoard[4] && arrayBoard[4] == arrayBoard[5])
             {
-                return 1;
+                if (arrayBoard[3] == 'X')
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 2;
+                }
             }
             // third row
             else if (arrayBoard[6] == arrayBoard[7] && arrayBoard[7] == arrayBoard[8])
             {
-                return 1;
+                if (arrayBoard[6] == 'X')
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 2;
+                }
             }
 
             // first column
             else if (arrayBoard[0] == arrayBoard[3] && arrayBoard[3] == arrayBoard[6])
             {
-                return 1;
+                if (arrayBoard[0] == 'X')
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 2;
+                }
             }
             // second column
             else if (arrayBoard[1] == arrayBoard[4] && arrayBoard[4] == arrayBoard[7])
             {
-                return 1;
+                if (arrayBoard[1] == 'X')
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 2;
+                }
             }
             // third column
             else if (arrayBoard[2] == arrayBoard[5] && arrayBoard[5] == arrayBoard[8])
             {
-                return 1;
+                if (arrayBoard[2] == 'X')
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 2;
+                }
             }
 
             // diagonal
             else if (arrayBoard[0] == arrayBoard[4] && arrayBoard[4] == arrayBoard[8])
             {
-                return 1;
+                if (arrayBoard[0] == 'X')
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 2;
+                }
             }
             else if (arrayBoard[2] == arrayBoard[4] && arrayBoard[4] == arrayBoard[6])
             {
-                return 1;
+                if (arrayBoard[2] == 'X')
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 2;
+                }
             }
 
             // Draw

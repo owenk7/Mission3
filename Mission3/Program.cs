@@ -95,9 +95,15 @@ namespace Mission3
                 winner = st.CheckWin(boardArray);
                 if (winner == 1)
                 {
-                    Console.WriteLine("~~~~Player " + player + " won the game!~~~~");
+                    Console.WriteLine("~~~~Player 1 won the game!~~~~");
                     continueGame = false;
                 }
+                else if (winner == 2)
+                {
+                    Console.WriteLine("~~~~Player 2 won the game!~~~~");
+                    continueGame = false;
+                }
+
                 else if (winner == -1)
                 {
                     Console.WriteLine("~~~~You tied!~~~~");
